@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    
+</head>
+
+<body>
+  <h1>!! WELCOME TO THE SOCIAL_NETWORKS_ADS PREDICTION SITE !!</h1>
+  <h2>   Here we use a random model classifiction method to predict the target from the inputed features:</h2>
+      
+    <form action="/predict" method="post" class="container">
+      <label for="Gender"> Gender:</label>
+      <input type="text" id="Gender" name="Gender"><br><br>
+      <label for="Age">Age:</label>
+      <input type="text" id="Age" name="Age"><br><br>
+      <label for="EstimatedSalary">Estimated Salary:</label>
+      <input type="text" id="EstimatedSalary" name="EstimatedSalary"><br><br>
+      <button type="submit"> Predict </button><br><br>
+        
+    </form>
+    <h1>RESULT OF THE PREDICTION</h1><br>
+    <h2>The prediction result for the endered datails for GENDER, AGE and EstimatedSalary will</h2><br>
+    {% if (pred_res)==0:  %}
+    <h2>  No Purchase  </h2>
+    {% elif (pred_res)==1:  %}
+    <h2>  Purchase </h2>
+    {% endif %}
+</body> 
+</html> 
+  
+
+
